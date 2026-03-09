@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0F0E17;
+  --color-secondary: #FF6F61;
+  --color-accent: #00FFE7;
+  --color-background: #1A1A2E;
+  --color-text: #EAEAEA;
+
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+:root {
+  --bg-current: var(--color-background);
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-current);
+  color: var(--color-text);
+  margin: 0;
+  transition: background-color 0.8s ease-in-out;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+/* Neon Glow utilities */
+.glow-accent {
+  text-shadow: 0 0 10px rgba(0, 255, 231, 0.7), 0 0 20px rgba(0, 255, 231, 0.5);
+}
+
+.glow-secondary {
+  text-shadow: 0 0 10px rgba(255, 111, 97, 0.7), 0 0 20px rgba(255, 111, 97, 0.5);
+}
+
+.hover-glow-accent:hover {
+  box-shadow: 0 0 15px rgba(0, 255, 231, 0.5);
+  border-color: var(--color-accent);
+}
+
+.hover-glow-secondary:hover {
+  box-shadow: 0 0 15px rgba(255, 111, 97, 0.5);
+  border-color: var(--color-secondary);
+}
+
+/* Base custom styles */
+.gradient-text {
+  background: linear-gradient(to right, var(--color-secondary), var(--color-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-grid-pattern {
+  background-image: linear-gradient(to right, rgba(234, 234, 234, 0.05) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(234, 234, 234, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
